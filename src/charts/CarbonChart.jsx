@@ -61,7 +61,7 @@ function CarbonChart( { title, metrics } ) {
         },
         series: [
             {
-            name: 'Fake Data',
+            name: 'Data',
             type: 'line',
             showSymbol: false,
             data: data
