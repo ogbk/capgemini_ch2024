@@ -2,11 +2,20 @@ import { useState, useRef } from 'react'
 import * as d3 from 'd3';
 import './App.css'
 import { useEffect } from 'react';
+import CarbonOperationalChart from './charts/CarbonOperationalChart';
+import CarbonNetworkEnergyChart from './charts/CarbonNetworkEnergyChart';
+import CarbonMemoryEnergyChart from './charts/CarbonMemoryEnergyChart';
+import CarbonEnergyChart from './charts/CarbonEnergyChart';
+import CPUEnergyChart from './charts/CpuEnergyChart';
+import CPUThermalDesignPowerChart from './charts/CPUThermalDesignPowerChart';
+import GridCarbonIntensityChart from './charts/GridCarbonIntencityChart';
 
 function App() {
+  /* 
   const [data] = useState([200, 250, 60, 150, 100, 175]);
   // this is to use svg for d3 and let d3 to control the DOM 
   const svgRef = useRef();
+  
   useEffect(() => {
     // setting up svg container 
     const w = 400;
@@ -47,10 +56,23 @@ function App() {
         .attr('width', xScale.bandwidth)
         .attr('height', val => h - yScale(val));
   }, [data]);
-
+  */
   return (
-    <div className='App'>
-      <svg ref= {svgRef}></svg>
+    <div className='charts'>
+      <div className='chart-row'>
+        <CarbonOperationalChart />
+        <CarbonMemoryEnergyChart/>
+      </div>
+      <div className='chart-row'>
+        <CarbonEnergyChart />
+        <CarbonNetworkEnergyChart />
+      </div>
+       <div className='chart-row'>
+        <CPUEnergyChart />
+        <CPUThermalDesignPowerChart />
+      </div>
+      <GridCarbonIntensityChart />
+      {/* <svg ref= {svgRef}></svg> */}
     </div>
   )
 }

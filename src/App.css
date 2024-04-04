@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.charts {
+  width: 1280px;
+}
+
+.chart-row { 
+  display: flex;
+  flex-direction: row;
+}
+
+.echarts-for-react {
+  width: 500px;
+}
