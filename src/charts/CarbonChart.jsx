@@ -11,11 +11,10 @@ function CarbonChart( { title, metrics } ) {
     outputs.forEach(out => {
         const date = out.timestamp;
         const normalisedTimestamp = convertTimestamp(date);
-        console.log(normalisedTimestamp);
-        data.push(formatData(new Date(normalisedTimestamp), out[metrics]))
+        data.push(defineData(new Date(normalisedTimestamp), out[metrics]))
     })
 
-    function formatData (date, val) {
+    function defineData (date, val) {
         return {
             name: date.toString(),
             value: [
@@ -68,8 +67,19 @@ function CarbonChart( { title, metrics } ) {
             data: data
             }
         ]
-        };
-   
+    };
+
+    setInterval(function () {
+        console.log('Reading file... ', outputs );
+
+        outputs.forEach(out => {
+            const date = out.timestamp;
+            const normalisedTimestamp = convertTimestamp(date);
+            data.push(defineData(new Date(normalisedTimestamp), out[metrics]))
+        })
+        option.data = data;
+        // every 10 seconds check file content
+    }, 10000);
     
     return <ReactEcharts option={option} />;
 } 
