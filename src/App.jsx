@@ -2,13 +2,8 @@ import { useState, useRef } from 'react'
 import * as d3 from 'd3';
 import './App.css'
 import { useEffect } from 'react';
-import CarbonOperationalChart from './charts/CarbonOperationalChart';
-import CarbonNetworkEnergyChart from './charts/CarbonNetworkEnergyChart';
-import CarbonMemoryEnergyChart from './charts/CarbonMemoryEnergyChart';
-import CarbonEnergyChart from './charts/CarbonEnergyChart';
-import CPUEnergyChart from './charts/CpuEnergyChart';
-import CPUThermalDesignPowerChart from './charts/CPUThermalDesignPowerChart';
-import GridCarbonIntensityChart from './charts/GridCarbonIntencityChart';
+import CarbonChart from './charts/CarbonChart';
+
 
 function App() {
   /* 
@@ -60,18 +55,18 @@ function App() {
   return (
     <div className='charts'>
       <div className='chart-row'>
-        <CarbonOperationalChart />
-        <CarbonMemoryEnergyChart/>
+        <CarbonChart metrics="memory/energy" title="Memory Energy"/>
+        <CarbonChart metrics="network/energy" title="Network Energy"/>
       </div>
       <div className='chart-row'>
-        <CarbonEnergyChart />
-        <CarbonNetworkEnergyChart />
+        <CarbonChart metrics="cpu/energy" title="CPU Energy"/>
+        <CarbonChart metrics= "grid/carbon-intensity" title="Grid Carbon Intensity"/>
       </div>
        <div className='chart-row'>
-        <CPUEnergyChart />
-        <CPUThermalDesignPowerChart />
+        <CarbonChart metrics="energy" title="Energy"/>
+        <CarbonChart metrics="carbon-operational" title="Carbon Operational"/>
       </div>
-      <GridCarbonIntensityChart />
+      <CarbonChart metrics="cpu/thermal-design-power" title ="CPU Thermal Design Power"/>
       {/* <svg ref= {svgRef}></svg> */}
     </div>
   )

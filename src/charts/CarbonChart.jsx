@@ -3,23 +3,16 @@ import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import { outputs } from "../outputs";
 
-function CarbonOperationalChart() { 
+function CarbonChart( { title, metrics } ) { 
+
     let data = [];
-    let dataExample = [];
-    let now = new Date(1997, 9, 3);
-    let oneDay = 24 * 3600 * 1000;
-    let value = Math.random() * 1000;
+
     outputs.forEach(out => {
         const date = out.timestamp;
-        data.push(formatDate(new Date(date), out['carbon-operational']))
+        data.push(formatData(new Date(date), out[metrics]))
     })
-    // for (var i = 0; i < 1000; i++) {
-    //     console.log('example: ', randomData());
-    //     dataExample.push(randomData());
-    // }
-    function formatDate (date, val) {
-        //value = value + Math.random() * 21 - 10;
-        console.log('val => ', val);
+
+    function formatData (date, val) {
         return {
             name: date.toString(),
             value: [
@@ -28,26 +21,9 @@ function CarbonOperationalChart() {
             ]
         };
     }
-    function randomData() {
-        now = new Date(+now + oneDay);
-        value = value + Math.random() * 21 - 10;
-        console.log('value 2 ', [
-            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
-            Math.round(value)
-            ]);
-        return {
-            name: now.toString(),
-            value: [
-            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
-            Math.round(value)
-            ]
-        };
-    }
-        
-
     const option = {
         title: {
-            text: 'Carbon-operational'
+            text: title
         },
         tooltip: {
             trigger: 'axis',
@@ -90,22 +66,9 @@ function CarbonOperationalChart() {
             }
         ]
         };
-    // setInterval(function () {
-    //     for (var i = 0; i < 5; i++) {
-    //         data.shift();
-    //         data.push(randomData());
-    //     }
-    //     option.setOption({
-    //         series: [
-    //             {
-    //                 data: data
-    //             }
-    //             ]
-    //         });
-    //     }, 1000
-    // );
+   
     
     return <ReactEcharts option={option} />;
 } 
 
-export default CarbonOperationalChart;
+export default CarbonChart;
