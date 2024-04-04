@@ -1,7 +1,7 @@
  // time change into :
  export const outputs = [
   {
-    "timestamp": "2024-04-03T14:26:41.000Z",
+    "timestamp": "2024-04-03T14-26-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.446347,
     "memory/utilization": 0.880814,
@@ -17,7 +17,7 @@
     "carbon-operational": 1.3341248723090355
   },
   {
-    "timestamp": "2024-04-03T14:31:41.000Z",
+    "timestamp": "2024-04-03T14-31-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.818303,
     "memory/utilization": 1.140785,
@@ -33,7 +33,7 @@
     "carbon-operational": 1.4016739369719264
   },
   {
-    "timestamp": "2024-04-03T14:36:41.000Z",
+    "timestamp": "2024-04-03T14-36-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.403948,
     "memory/utilization": 1.138115,
@@ -49,7 +49,7 @@
     "carbon-operational": 1.3447656695113714
   },
   {
-    "timestamp": "2024-04-03T14:41:41.000Z",
+    "timestamp": "2024-04-03T14-41-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.374253,
     "memory/utilization": 1.146507,
@@ -65,7 +65,7 @@
     "carbon-operational": 1.3412254263106649
   },
   {
-    "timestamp": "2024-04-03T14:46:41.000Z",
+    "timestamp": "2024-04-03T14-46-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.946137,
     "memory/utilization": 1.149273,
@@ -81,7 +81,7 @@
     "carbon-operational": 1.419673158161741
   },
   {
-    "timestamp": "2024-04-03T14:51:41.000Z",
+    "timestamp": "2024-04-03T14-51-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.478655,
     "memory/utilization": 1.144886,
@@ -97,7 +97,7 @@
     "carbon-operational": 1.355453637914467
   },
   {
-    "timestamp": "2024-04-03T14:56:41.000Z",
+    "timestamp": "2024-04-03T14-56-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.395385,
     "memory/utilization": 1.145458,
@@ -113,7 +113,7 @@
     "carbon-operational": 1.34406249307166
   },
   {
-    "timestamp": "2024-04-03T15:01:41.000Z",
+    "timestamp": "2024-04-03T15-01-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.73681,
     "memory/utilization": 1.152229,
@@ -129,7 +129,7 @@
     "carbon-operational": 1.3912689279409225
   },
   {
-    "timestamp": "2024-04-03T15:06:41.000Z",
+    "timestamp": "2024-04-03T15-06-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.258394,
     "memory/utilization": 1.146603,
@@ -145,7 +145,7 @@
     "carbon-operational": 1.3253354211995438
   },
   {
-    "timestamp": "2024-04-03T15:11:41.000Z",
+    "timestamp": "2024-04-03T15-11-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.642869,
     "memory/utilization": 1.153469,
@@ -161,7 +161,7 @@
     "carbon-operational": 1.378498254742476
   },
   {
-    "timestamp": "2024-04-03T15:16:41.000Z",
+    "timestamp": "2024-04-03T15-16-41.000Z",
     "duration": 300,
     "cpu/utilization": 4.117024,
     "memory/utilization": 1.154041,
@@ -177,7 +177,7 @@
     "carbon-operational": 1.4432892369598904
   },
   {
-    "timestamp": "2024-04-03T15:21:41.000Z",
+    "timestamp": "2024-04-03T15-21-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.598562,
     "memory/utilization": 1.154518,
@@ -193,7 +193,7 @@
     "carbon-operational": 1.3724896342112596
   },
   {
-    "timestamp": "2024-04-03T15:26:41.000Z",
+    "timestamp": "2024-04-03T15-26-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.439551,
     "memory/utilization": 1.154613,
@@ -209,7 +209,7 @@
     "carbon-operational": 1.3507000446598774
   },
   {
-    "timestamp": "2024-04-03T15:31:41.000Z",
+    "timestamp": "2024-04-03T15-31-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.331749,
     "memory/utilization": 1.154804,
@@ -225,7 +225,7 @@
     "carbon-operational": 1.335935888181526
   },
   {
-    "timestamp": "2024-04-03T15:36:41.000Z",
+    "timestamp": "2024-04-03T15-36-41.000Z",
     "duration": 300,
     "cpu/utilization": 3.337007,
     "memory/utilization": 1.155186,
@@ -240,4 +240,4 @@
     "energy": 0.0016708465901652317,
     "carbon-operational": 1.3366772721321853
   }
-];
+]

@@ -2,6 +2,7 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import { outputs } from "../outputs";
+import { convertTimestamp } from "../services/formatTimestamp";
 
 function CarbonChart( { title, metrics } ) { 
 
@@ -9,7 +10,9 @@ function CarbonChart( { title, metrics } ) {
 
     outputs.forEach(out => {
         const date = out.timestamp;
-        data.push(formatData(new Date(date), out[metrics]))
+        const normalisedTimestamp = convertTimestamp(date);
+        console.log(normalisedTimestamp);
+        data.push(formatData(new Date(normalisedTimestamp), out[metrics]))
     })
 
     function formatData (date, val) {
