@@ -9,7 +9,7 @@
 
 ## How to Use 🛠️
 * The Impact Framework output is to be copied into the __output.json__ file.
-* This output.json file then connects to the website we have created to update the seven time series charts.
+* This output.json file then connects to the website we have created to update six time series charts.
 * In the time we have had available to us in this hackathon we have not been able to automate the process of passing the Impact Framework plugin results to the website. This is something we will look to achieve in phase two of development!
 
 ### Website 🌐
