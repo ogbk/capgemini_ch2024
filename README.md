@@ -44,8 +44,8 @@ The website contains seven time series charts showing the below metrics over a _
 
 
 ## The Pipeline :chains:
-Images of the workflow we followed:
-![Flowchart 1](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage1.png)
+The project workflow:
+![Flowchart 1](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage4.png)
 
 
 ![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage2.png)
