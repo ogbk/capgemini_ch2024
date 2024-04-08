@@ -6,16 +6,21 @@
   
 ![Capgemini Logo](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/Capgemini_Logo_Color-300x75.png)
 
+© 2024 Capgemini -
+All Rights Reserved
+
 
 ## How to Use 🛠️
 * The Impact Framework output is to be copied into the __output.json__ file.
 * This output.json file then connects to the website we have created to update six time series charts.
 * In the time we have had available to us in this hackathon we have not been able to automate the process of passing the Impact Framework plugin results to the website. This is something we will look to achieve in phase two of development!
 
+
 ### Website 🌐
 Here is a link to the website we have created as part of our project:
 
 ➡️➡️➡️ [Environmental Measures of LLMs](https://github.com/ogbk/capgemini_ch2024/blob/main/ExampleCharts.png)
+
 
 ### Example Visuals 🖼️
 Examples of the time series charts that our website will display:
@@ -24,13 +29,14 @@ Examples of the time series charts that our website will display:
 
 
 
-## Inspiration
-* Following the success of ChatGPT and co. there has been a significant increase in interest in LLMs by businesses across various sectors, which is predicted to continue to grow.
+## Inspiration 🪄
+* Following the success of ChatGPT (and co.) there has been a significant increase in interest in LLMs by businesses across various sectors, which is predicted to continue to grow.
 * This is happening at the same time as businesses are experiencing an increase in sustainability reporting requirements 🔗 [EU Corporate Sustainability Reporting  Directive](https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en)
 * There is rising concern about the vast amounts of energy that will be required to power the rise of LLMs (and AI more generally), which Sam Altman (ChatGPT creator 🤖) referenced in his recent speech as Davos 🔗 [Nuclear Fusion needed to power superhuman AI - News](https://www.independent.co.uk/tech/nuclear-fusion-ai-chatgpt-sam-altman-b2514836.html)
 * We have identified a potential gap between these two trends which could be filled with a tool like the __Impact Framework.__
 * Our project is inspired by the need to balance the benefits of the continued rise and development of AI (particularly LLMs) with the environmental impact of the massive amount of computing power needed.
 * We hope our project will inform and educate.
+
 
 ## Features 📋
 The website contains seven time series charts showing the below metrics over a __one hour__ time period:
@@ -51,11 +57,10 @@ The project workflow:
 ![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage5.png)
 
 
-![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage3.png)
+![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage6.png)
 
 
 ## React + Vite 🌩️
-
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -64,7 +69,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-## Green Software Foundation Goals and Philosophy
+## Green Software Foundation Goals and Philosophy 📗
 Whilst creating and planning our project we wanted to ensure our contribution was aligned with the Impact Framework's Design Philosophy:
 * Transparency: We used existing IF plugins as a basis of our project and took advantage of the transparent manifest file structure. Our contribution is also transparent, with all steps we have taken being freely available for all to review on this Github repo.
 * Verifiability: Again, we have used the existing manifest file structure in our project to ensure our results are verifiable. We have designed the project so that numerous LLM use cases can be tested; from RAG to text generation to classification.
@@ -73,7 +78,7 @@ Whilst creating and planning our project we wanted to ensure our contribution wa
 * Neutrality: The output we have created aims to inform only - not to provide any particular assessment on whether an LLM is suitable. Through the use of Prometheus, users will be able to add an alert for when any metric exceeds a certain value, but this value is not built into our solution.
 
 
-## Link to Video
+## Link to Video 📹
 We have also created a demo video which provides more detail of our project on an end to end basis:
 
 ➡️➡️➡️ 
@@ -89,7 +94,6 @@ We have also created a demo video which provides more detail of our project on a
 
 
 ## Useful Links and References :link:
-
 * https://github.com/Green-Software-Foundation/hack
 * https://if.greensoftware.foundation/
 * https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en
