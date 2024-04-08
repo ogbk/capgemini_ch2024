@@ -52,6 +52,7 @@ h1 {
 .chart-row { 
   display: flex;
   flex-direction: row;
+  text-align: left;
 }
 
 .echarts-for-react {

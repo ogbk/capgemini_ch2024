@@ -11,17 +11,30 @@ function App() {
       <div className='charts'>
         <div className='chart-row'>
           <CarbonChart metrics="memory/energy" title="Memory Energy"/>
+          <div>Energy consumed by the Memory during the deployment of the LLM Service</div>
+        </div>
+        <div className='chart-row'>
           <CarbonChart metrics="network/energy" title="Network Energy"/>
+          <div>Energy consumed by the Network during the deployment of the LLM Service</div>
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="cpu/energy" title="CPU Energy"/>
-          <CarbonChart metrics= "grid/carbon-intensity" title="Grid Carbon Intensity"/>
+          <div>Energy consumed by the CPU during the deployment of the LLM Service< br />
+          Reference: <a href="https://www.amd.com/system/files/documents/4th-gen-epyc-processor-architecture-white-paper.pdf">Thermal Design Power</a></div>
         </div>
         <div className='chart-row'>
-          <CarbonChart metrics="energy" title="Energy"/>
-          <CarbonChart metrics="carbon-operational" title="Carbon Operational"/>
+          <CarbonChart metrics="energy" title="Total Energy"/>
+          <div>Total Energy = Memory Energy + Network Energy + CPU Energy, 
+            <br />represents the total amount of energy consumed by the LLM Service</div>
         </div>
-        <CarbonChart metrics="cpu/thermal-design-power" title ="CPU Thermal Design Power"/>
+        <div className='chart-row'>
+          <CarbonChart metrics="carbon-operational" title="Carbon Operational"/>
+          <div>Carbon Operational = Total Energy * Grid Carbon Intensity, where Grid Carbon Intensity is a measure <br/>of how much carbon (gCO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed.
+            <br />
+            In this case, it is a fixed value: 81.57 [gCO2eq/kWh] <br />
+            Reference: <a href="https://carbonintensity.org.uk/">Grid Intensity</a>
+          </div>          
+        </div>
       </div>
     </>
   )
