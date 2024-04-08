@@ -4,7 +4,7 @@ import ReactEcharts from "echarts-for-react";
 import outputs from '../../output.json';
 import { convertTimestamp } from "../services/formatTimestamp";
 
-function CarbonChart( { title, metrics } ) { 
+function CarbonChart( { title, metrics, yAxeName } ) { 
     let data = [];
 
     outputs.forEach(out => {
@@ -52,6 +52,7 @@ function CarbonChart( { title, metrics } ) {
             }
         },
         yAxis: {
+            name: yAxeName,
             type: 'value',
             boundaryGap: [0, '100%'],
             splitLine: {
