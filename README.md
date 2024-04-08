@@ -4,7 +4,7 @@
 * We are a team of developers, AI enthusiasts and story tellers who share a keen interest and passion for sustainablity and the technical solutions that can help move towards a more sustainable IT industry.
 * Team made up of members of the Capgemini Insights & Data Sustainability Guild.
   
-![Capgemini Logo](https://github.com/ogbk/capgemini_ch2024/blob/main/Capgemini_Logo_Color-300x75.png)
+![Capgemini Logo](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/Capgemini_Logo_Color-300x75.png)
 
 
 ## How to Use 🛠️
@@ -20,7 +20,7 @@ Here is a link to the website we have created as part of our project:
 ### Example Visuals 🖼️
 Examples of the time series charts that our website will display:
 
-![Example Environmental Output Line Graphs](https://github.com/ogbk/capgemini_ch2024/blob/main/ExampleCharts.png)
+![Example Environmental Output Line Graphs](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/ExampleCharts.png)
 
 
 
@@ -45,13 +45,13 @@ The website contains seven time series charts showing the below metrics over a _
 
 ## The Pipeline :chains:
 Images of the workflow we followed:
-![Flowchart 1](https://github.com/ogbk/capgemini_ch2024/blob/main/PipelineImage1.png)
+![Flowchart 1](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage1.png)
 
 
-![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/PipelineImage2.png)
+![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage2.png)
 
 
-![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/PipelineImage3.png)
+![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage3.png)
 
 
 ## React + Vite 🌩️
