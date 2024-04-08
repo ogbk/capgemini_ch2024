@@ -19,7 +19,7 @@ All Rights Reserved
 ### Website 🌐
 Here is a link to the website we have created as part of our project:
 
-➡️➡️➡️ [Environmental Measures of LLMs](https://github.com/ogbk/capgemini_ch2024/blob/main/ExampleCharts.png)
+➡️➡️➡️ [Environmental Measures of LLMs](https://ogbk.github.io/capgemini_ch2024/)
 
 
 ### Example Visuals 🖼️
