@@ -64,7 +64,7 @@ function App() {
       </div>
        <div className='chart-row'>
         <CarbonChart metrics="energy" title="Energy"/>
-        <CarbonChart metrics="carbon-operational" title="Carbon Operational"/>
+        <CarbonChart metrics="carbon-operational" title="Carbon Operational 2"/>
       </div>
       {/*<CarbonChart metrics="cpu/thermal-design-power" title ="CPU Thermal Design Power"/>*/}
       {/* <svg ref= {svgRef}></svg> */}
