@@ -20,7 +20,7 @@ Here is a link to the website we have created as part of our project:
 ### Example Visuals 🖼️
 Examples of the time series charts that our website will display:
 
-![Example Environmental Output Line Graphs](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/ExampleCharts.png)
+![Example Environmental Output Line Graphs](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/3ExampleCharts.png)
 
 
 
