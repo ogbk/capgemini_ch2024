@@ -59,6 +59,9 @@ The project workflow:
 ![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage6.png)
 
 
+![Flowchart 4](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage7.png)
+
+
 ## React + Vite 🌩️
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
