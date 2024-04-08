@@ -48,7 +48,7 @@ The project workflow:
 ![Flowchart 1](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage4.png)
 
 
-![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage2.png)
+![Flowchart 2](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage5.png)
 
 
 ![Flowchart 3](https://github.com/ogbk/capgemini_ch2024/blob/main/Images/PipelineImage3.png)
