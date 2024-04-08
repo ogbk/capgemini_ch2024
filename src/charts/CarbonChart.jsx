@@ -1,11 +1,10 @@
 
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
-import { outputs } from "../outputs";
+import outputs from '../../output.json';
 import { convertTimestamp } from "../services/formatTimestamp";
 
 function CarbonChart( { title, metrics } ) { 
-
     let data = [];
 
     outputs.forEach(out => {
@@ -70,8 +69,6 @@ function CarbonChart( { title, metrics } ) {
     };
 
     setInterval(function () {
-        console.log('Reading file... ', outputs );
-
         outputs.forEach(out => {
             const date = out.timestamp;
             const normalisedTimestamp = convertTimestamp(date);
