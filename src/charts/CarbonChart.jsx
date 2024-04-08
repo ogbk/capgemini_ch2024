@@ -2,16 +2,14 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react"; 
 import outputs from '../../output.json';
-import { convertTimestamp } from "../services/formatTimestamp";
 
 function CarbonChart( { title, metrics, yAxeName } ) { 
     let data = [];
 
     outputs.forEach(out => {
         const date = out.timestamp;
-        const normalisedTimestamp = convertTimestamp(date);
         let val = out[metrics];
-        data.push(defineData(new Date(normalisedTimestamp), val));
+        data.push(defineData(new Date(date), val));
     })
 
     function defineData (date, val) {
@@ -78,8 +76,7 @@ function CarbonChart( { title, metrics, yAxeName } ) {
     setInterval(function () {
         outputs.forEach(out => {
             const date = out.timestamp;
-            const normalisedTimestamp = convertTimestamp(date);
-            data.push(defineData(new Date(normalisedTimestamp), out[metrics]))
+            data.push(defineData(new Date(date), out[metrics]))
         })
         option.data = data;
         // every 10 seconds check file content
