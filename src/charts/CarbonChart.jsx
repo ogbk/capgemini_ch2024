@@ -11,11 +11,6 @@ function CarbonChart( { title, metrics, yAxeName } ) {
         const date = out.timestamp;
         const normalisedTimestamp = convertTimestamp(date);
         let val = out[metrics];
-        if (metrics === 'network/energy') {
-            // get rid of e-7 in values like 4.0800000000000005e-7 
-            const index = val.toString().indexOf('e-7');
-            val = out[metrics].toString().substring(0, index);
-        }
         data.push(defineData(new Date(normalisedTimestamp), val));
     })
 

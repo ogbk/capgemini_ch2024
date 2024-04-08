@@ -1,10 +1,9 @@
-import json from '../../output.json';
-
-export const calculateAverages = (metrics) => {
-    let val = 0;
-    json.forEach(entry =>{
-        val += entry[metrics];
-    })
-    const average = val/json.length;
-    return average.toString().substring(0, 7);
-}
+export const calculateAverages = (output, key, maxDecimals = 5) => {
+    const totalItems = output.length;
+    
+    let sum = 0;
+    output.forEach((value) => {sum += value[key]});
+  
+    const average = sum / totalItems;
+    return Number(average).toFixed(maxDecimals);
+  }
