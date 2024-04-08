@@ -66,7 +66,7 @@ function CarbonChart( { title, metrics, yAxeName } ) {
             }, 
            axisLabel: {
                 formatter: (val) => {
-                    return val.toString().substring(0, 6);
+                    return val.toString().substring(0, 7);
                 }
             }
         },

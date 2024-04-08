@@ -1,6 +1,6 @@
 import './App.css'
 import CarbonChart from './charts/CarbonChart';
-
+import { calculateAverages } from './services/calculateAverages';
 
 function App() {
   return (
@@ -11,21 +11,28 @@ function App() {
       <div className='charts'>
         <div className='chart-row'>
           <CarbonChart metrics="memory/energy" title="Memory Energy" yAxeName="[kWh]"/>
-          <div>Energy consumed by the Memory during the deployment of the LLM Service</div>
+          <div>Energy consumed by the Memory during the deployment of the LLM Service
+            <br/><b>Average:</b>: {calculateAverages('memory/energy')}
+          </div>
+          
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="network/energy" title="Network Energy" yAxeName="[kWh]"/>
-          <div>Energy consumed by the Network during the deployment of the LLM Service</div>
+          <div>Energy consumed by the Network during the deployment of the LLM Service
+            <br/><b>Average:</b>: {calculateAverages('network/energy')}
+          </div>
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="cpu/energy" title="CPU Energy" yAxeName="[kWh]"/>
           <div>Energy consumed by the CPU during the deployment of the LLM Service< br />
-          Reference: <a href="https://www.amd.com/system/files/documents/4th-gen-epyc-processor-architecture-white-paper.pdf">Thermal Design Power</a></div>
+          Reference: <a href="https://www.amd.com/system/files/documents/4th-gen-epyc-processor-architecture-white-paper.pdf">Thermal Design Power</a>
+          <br/><b>Average:</b> {calculateAverages('cpu/energy')}</div>
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="energy" title="Total Energy" yAxeName="[kWh]"/>
           <div>Total Energy = Memory Energy + Network Energy + CPU Energy, 
-            <br />represents the total amount of energy consumed by the LLM Service</div>
+            <br />represents the total amount of energy consumed by the LLM Service
+            <br/><b>Average:</b> {calculateAverages('energy')}</div>
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="carbon-operational" title="Carbon Operational" yAxeName="[gCO2eq]"/>
@@ -33,6 +40,7 @@ function App() {
             <br />
             In this case, it is a fixed value: 81.57 [gCO2eq/kWh] <br />
             Reference: <a href="https://carbonintensity.org.uk/">Grid Intensity</a>
+            <br/><b>Average:</b> {calculateAverages('carbon-operational')}
           </div>          
         </div>
       </div>
