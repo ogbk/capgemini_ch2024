@@ -72,7 +72,7 @@ Currently, two official plugins are available:
 Whilst creating and planning our project we wanted to ensure our contribution was aligned with the Impact Framework's Design Philosophy:
 * Transparency: We used existing IF plugins as a basis of our project and took advantage of the transparent manifest file structure. Our contribution is also transparent, with all steps we have taken being freely available for all to review on this Github repo.
 * Verifiability: Again, we have used the existing manifest file structure in our project to ensure our results are verifiable. We have designed the project so that numerous LLM use cases can be tested; from RAG to text generation to classification.
-* Flexibility: We have tested our project on a number of different LLM use cases (as noted above) and have seven different outputs which users can review as needed for their use case. This provides flexibility in approach, whether a company is focused more on carbon or energy use.
+* Flexibility: We have tested our project on a number of different LLM use cases (as noted above) and have six different outputs which users can review as needed for their use case. This provides flexibility in approach, whether a company is focused more on carbon or energy use.
 * Modularity: The solution we have created is highly modular and scalable.
 * Neutrality: The output we have created aims to inform only - not to provide any particular assessment on whether an LLM is suitable. Through the use of Prometheus, users will be able to add an alert for when any metric exceeds a certain value, but this value is not built into our solution.
 
