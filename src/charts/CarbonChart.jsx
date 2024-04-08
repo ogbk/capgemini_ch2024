@@ -10,7 +10,13 @@ function CarbonChart( { title, metrics, yAxeName } ) {
     outputs.forEach(out => {
         const date = out.timestamp;
         const normalisedTimestamp = convertTimestamp(date);
-        data.push(defineData(new Date(normalisedTimestamp), out[metrics]))
+        let val = out[metrics];
+        if (metrics === 'network/energy') {
+            // get rid of e-7 in values like 4.0800000000000005e-7 
+            const index = val.toString().indexOf('e-7');
+            val = out[metrics].toString().substring(0, index);
+        }
+        data.push(defineData(new Date(normalisedTimestamp), val));
     })
 
     function defineData (date, val) {
@@ -56,15 +62,20 @@ function CarbonChart( { title, metrics, yAxeName } ) {
             type: 'value',
             boundaryGap: [0, '100%'],
             splitLine: {
-            show: false
+                show: false
+            }, 
+           axisLabel: {
+                formatter: (val) => {
+                    return val.toString().substring(0, 6);
+                }
             }
         },
         series: [
             {
-            name: 'Data',
-            type: 'line',
-            showSymbol: false,
-            data: data
+                name: 'Data',
+                type: 'line',
+                showSymbol: false,
+                data: data
             }
         ]
     };
