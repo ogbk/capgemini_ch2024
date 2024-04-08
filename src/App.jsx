@@ -12,14 +12,14 @@ function App() {
         <div className='chart-row'>
           <CarbonChart metrics="memory/energy" title="Memory Energy" yAxeName="[kWh]"/>
           <div>Energy consumed by the Memory during the deployment of the LLM Service
-            <br/><b>Average:</b>: {calculateAverages('memory/energy')}
+            <br/><b>Average:</b> {calculateAverages('memory/energy')}
           </div>
           
         </div>
         <div className='chart-row'>
           <CarbonChart metrics="network/energy" title="Network Energy" yAxeName="[kWh]"/>
           <div>Energy consumed by the Network during the deployment of the LLM Service
-            <br/><b>Average:</b>: {calculateAverages('network/energy')}
+            <br/><b>Average:</b> {calculateAverages('network/energy')}
           </div>
         </div>
         <div className='chart-row'>
