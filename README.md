@@ -28,8 +28,8 @@ Examples of the time series charts that our website will display:
 * Following the success of ChatGPT and co. there has been a significant increase in interest in LLMs by businesses across various sectors, which is predicted to continue to grow.
 * This is happening at the same time as businesses are experiencing an increase in sustainability reporting requirements 🔗 [EU Corporate Sustainability Reporting  Directive](https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en)
 * There is rising concern about the vast amounts of energy that will be required to power the rise of LLMs (and AI more generally), which Sam Altman (ChatGPT creator 🤖) referenced in his recent speech as Davos 🔗 [Nuclear Fusion needed to power superhuman AI - News](https://www.independent.co.uk/tech/nuclear-fusion-ai-chatgpt-sam-altman-b2514836.html)
-* We thave identified a potential gap between these two trends which could be filled with a tool like the __Impact Framework.__
-* Our project is inspired by the need to balance the benefits of the continued rise and development of AI (particularly LLMs) with the envornmental impact of the massive amount of computing power needed.
+* We have identified a potential gap between these two trends which could be filled with a tool like the __Impact Framework.__
+* Our project is inspired by the need to balance the benefits of the continued rise and development of AI (particularly LLMs) with the environmental impact of the massive amount of computing power needed.
 * We hope our project will inform and educate.
 
 ## Features 📋
@@ -65,9 +65,9 @@ Currently, two official plugins are available:
 
 
 ## Green Software Foundation Goals and Philosophy
-Whilst creating and planning our project we wanted to ensure our contribution was aligned with the Impact Framework's Design Philisophy:
-* Transparency: We used exisiting IF plugins as a basis of our project and took advantage of the transparent manifest file structure. Our contribution is also transparent, with all steps we have taken being freely available for all to review on this Github repo.
-* Verifiability: Again, we have used the exisiting manifest file structure in our project to ensure our results are verifiable. We have designed the project so that numerous LLM use cases can be tested; from RAG to text generation to classification.
+Whilst creating and planning our project we wanted to ensure our contribution was aligned with the Impact Framework's Design Philosophy:
+* Transparency: We used existing IF plugins as a basis of our project and took advantage of the transparent manifest file structure. Our contribution is also transparent, with all steps we have taken being freely available for all to review on this Github repo.
+* Verifiability: Again, we have used the existing manifest file structure in our project to ensure our results are verifiable. We have designed the project so that numerous LLM use cases can be tested; from RAG to text generation to classification.
 * Flexibility: We have tested our project on a number of different LLM use cases (as noted above) and have seven different outputs which users can review as needed for their use case. This provides flexibility in approach, whether a company is focused more on carbon or energy use.
 * Modularity: The solution we have created is highly modular and scalable.
 * Neutrality: The output we have created aims to inform only - not to provide any particular assessment on whether an LLM is suitable. Through the use of Prometheus, users will be able to add an alert for when any metric exceeds a certain value, but this value is not built into our solution.
@@ -97,4 +97,4 @@ We have also created a demo video which provides more detail of our project on a
 * https://www.amd.com/system/files/documents/4th-gen-epyc-processor-architecture-white-paper.pdf
 * https://carbonintensity.org.uk/
 
-### Big shout out to the team at The Green Software Foundation for organising the hackathon that resulted to this very interesting project. Links to their sites above 🤘
+### Big shout out to the team at The Green Software Foundation for organising the hackathon that resulted in this very interesting project. Links to their sites above 🤘
