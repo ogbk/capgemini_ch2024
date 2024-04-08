@@ -78,9 +78,9 @@ Whilst creating and planning our project we wanted to ensure our contribution wa
 
 
 ## Link to Video 📹
-We have also created a demo video which provides more detail of our project on an end to end basis:
+We have also created a demo video which goes through our project on an end to end basis:
 
-➡️➡️➡️ 
+➡️➡️➡️ [Video Demo!](https://www.youtube.com/watch?v=tla1wd2QG-E&feature=youtu.be)
 
 
 ## Team Members 🧑‍💻
