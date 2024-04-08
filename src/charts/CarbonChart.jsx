@@ -53,6 +53,8 @@ function CarbonChart( { title, metrics, yAxeName } ) {
         yAxis: {
             name: yAxeName,
             type: 'value',
+            min: metrics==='sci' ? 155: undefined,
+            max: metrics==='sci' ? 160 : undefined,
             boundaryGap: [0, '100%'],
             splitLine: {
                 show: false

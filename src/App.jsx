@@ -45,7 +45,7 @@ function App() {
           </div>          
         </div>
         <div className='chart-row'>
-          <CarbonChart metrics="sci" title="SCI Score" yAxeName="[gCOseq]"/>
+          <CarbonChart metrics="sci" title="SCI Score" yAxeName="[gCO2eq]"/>
           <div>SCI Score = Carbon Operational + Carbon Embodied,
             <br/>where Carbon Embodied is a fraction of the total embodied emissions emitted 
             <br/>during the creation and disposal of a hardware device
