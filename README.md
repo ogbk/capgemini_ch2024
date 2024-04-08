@@ -1,6 +1,6 @@
 # Measuring & visualising the environmental impact of LLMs using the Impact Framework 🌲💻💡
 * Created over an _intense_ four week period as part of the Green Software Foundation Carbon Hack 2024 (Best Contribution Award 🏆)
-* Our project aims to enhance the Impact Framework by providing a visual element to compliment the low-level infrastructure of the Impact Framework, in order to effectively communicate its results to a wider range of audiences.
+* Our project aims to enhance the Impact Framework by providing a visual element to complement the low-level infrastructure of the Impact Framework, in order to effectively communicate its results to a wider range of audiences.
 * We are a team of developers, AI enthusiasts and story tellers who share a keen interest and passion for sustainablity and the technical solutions that can help move towards a more sustainable IT industry.
 * Team made up of members of the Capgemini Insights & Data Sustainability Guild.
   
