@@ -94,5 +94,7 @@ We have also created a demo video which provides more detail of our project on a
 * https://if.greensoftware.foundation/
 * https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en
 * https://www.independent.co.uk/tech/nuclear-fusion-ai-chatgpt-sam-altman-b2514836.html
+* https://www.amd.com/system/files/documents/4th-gen-epyc-processor-architecture-white-paper.pdf
+* https://carbonintensity.org.uk/
 
 ### Big shout out to the team at The Green Software Foundation for organising the hackathon that resulted to this very interesting project. Links to their sites above 🤘
