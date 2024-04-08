@@ -39,14 +39,13 @@ Examples of the time series charts that our website will display:
 
 
 ## Features 📋
-The website contains seven time series charts showing the below metrics over a __one hour__ time period:
-* cpu/thermal-design-power
-* grid/carbon-intensity
-* memory/energy
-* network/energy
-* cpu/energy
-* energy            
-* carbon-operational
+The website contains six time series charts showing the below metrics over a __one hour__ time period:
+* Memory Energy
+* Network Energy
+* CPU Energy
+* Total Energy (Memory Energy + Network Energy + CPU Energy)
+* Carbon Operational (Total Energy * Grid Carbon Intensity)
+* SCI Score (Carbon Operational + Carbon Embodied)
 
 
 ## The Pipeline :chains:
