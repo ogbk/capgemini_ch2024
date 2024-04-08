@@ -49,7 +49,7 @@ function App() {
           <div>SCI Score = Carbon Operational + Carbon Embodied,
             <br/>where Carbon Embodied is a fraction of the total embodied emissions emitted 
             <br/>during the creation and disposal of a hardware device
-            <br/>In this case, it is a fixed value: 157.325[gCO2eq]i
+            <br/>In this case, it is a fixed value: 157.325 [gCO2eq]
             <br />
             Reference: <a href="https://docs.google.com/spreadsheets/d/1k-6JtneEu4E9pXQ9QMCXAfyntNJl8MnV2YzO4aKHh-0/edit?pli=1#gid=0">Embodied Emissions</a>
             <br/><b>Average:</b> {calculateAverages(outputs, 'sci')}
