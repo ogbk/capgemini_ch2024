@@ -1,0 +1,553 @@
+name: llm-carbon
+description: ''
+initialize:
+  plugins:
+    e-mem:
+      path: '@grnsft/if-plugins'
+      method: EMem
+      global-config:
+        energy-per-gb: 0.002
+    e-net:
+      path: '@grnsft/if-plugins'
+      method: ENet
+      global-config:
+        energy-per-gb: 0.002
+    teads-curve:
+      path: '@grnsft/if-unofficial-plugins'
+      method: TeadsCurve
+      global-config:
+        interpolation: spline
+    sci-e:
+      path: '@grnsft/if-plugins'
+      method: SciE
+    sci-m:
+      path: '@grnsft/if-plugins'
+      method: SciM
+    sci-o:
+      path: '@grnsft/if-plugins'
+      method: SciO
+    sci:
+      path: '@grnsft/if-plugins'
+      method: Sci
+      global-config:
+        functional-unit: requests
+        functional-unit-time: 5 minutes
+  outputs:
+    - yaml
+if-version: v0.3.1
+tree:
+  children:
+    app-framework:
+      pipeline:
+        - e-mem
+        - e-net
+        - teads-curve
+        - sci-e
+        - sci-m
+        - sci-o
+        - sci
+      defaults:
+        memory/capacity: 12
+        cpu/thermal-design-power: 200
+        grid/carbon-intensity: 81.57
+        device/emissions-embodied: 1887.9
+        time-reserved: 3600
+        device/expected-lifespan: 3600
+        resources-reserved: 1
+        resources-total: 1
+        functional-unit-time: 5mins
+      inputs:
+        - timestamp: 2024-04-08T14:00:00.000Z
+          duration: 300
+          cpu/utilization: 49.985708909613194
+          memory/utilization: 17.145002683003742
+          network/data-in: 2.7438050872688317e-7
+          network/data-out: 0.0000011386791112165653
+        - timestamp: 2024-04-08T14:05:00.000Z
+          duration: 300
+          cpu/utilization: 42.61520726729
+          memory/utilization: 17.356672286987305
+          network/data-in: 6.859674999009613e-8
+          network/data-out: 2.7426699996038454e-7
+        - timestamp: 2024-04-08T14:10:00.000Z
+          duration: 300
+          cpu/utilization: 49.13741458705495
+          memory/utilization: 17.413272857666016
+          network/data-in: 6.856674999009613e-8
+          network/data-out: 2.7426692589603846e-7
+        - timestamp: 2024-04-08T14:15:00.000Z
+          duration: 300
+          cpu/utilization: 43.60946824732535
+          memory/utilization: 17.413131395975753
+          network/data-in: 6.837904365752413e-8
+          network/data-out: 2.735161746300965e-7
+        - timestamp: 2024-04-08T14:20:00.000Z
+          duration: 300
+          cpu/utilization: 47.94812670387665
+          memory/utilization: 17.413318951924637
+          network/data-in: 6.814904365752413e-8
+          network/data-out: 2.735167346300965e-7
+        - timestamp: 2024-04-08T14:25:00.000Z
+          duration: 300
+          cpu/utilization: 44.62622445809058
+          memory/utilization: 17.41310914357503
+          network/data-in: 6.678904365752414e-8
+          network/data-out: 2.495167346300965e-7
+        - timestamp: 2024-04-08T14:30:00.000Z
+          duration: 300
+          cpu/utilization: 48.464855654316295
+          memory/utilization: 17.41322199503581
+          network/data-in: 6.873809095451751e-8
+          network/data-out: 1.3747618190903502e-7
+        - timestamp: 2024-04-08T14:35:00.000Z
+          duration: 300
+          cpu/utilization: 36.85958561209994
+          memory/utilization: 17.413328488667805
+          network/data-in: 6.347380909545176e-8
+          network/data-out: 1.0999254297803864e-7
+        - timestamp: 2024-04-08T14:40:00.000Z
+          duration: 300
+          cpu/utilization: 35.347429291505
+          memory/utilization: 17.41313934326172
+          network/data-in: 6.673096142071653e-8
+          network/data-out: 1.0999254297803864e-7
+        - timestamp: 2024-04-08T14:45:00.000Z
+          duration: 300
+          cpu/utilization: 48.4187954052908
+          memory/utilization: 17.413196563720703
+          network/data-in: 6.783096142071654e-8
+          network/data-out: 1.2999254297803863e-7
+        - timestamp: 2024-04-08T14:50:00.000Z
+          duration: 300
+          cpu/utilization: 46.6151915944258
+          memory/utilization: 17.413231531778973
+          network/data-in: 6.813096142071653e-8
+          network/data-out: 1.1479254297803864e-7
+        - timestamp: 2024-04-08T14:55:00.000Z
+          duration: 300
+          cpu/utilization: 51.49152278813774
+          memory/utilization: 17.414560317993164
+          network/data-in: 6.523096142071654e-8
+          network/data-out: 1.0939254297803863e-7
+        - timestamp: 2024-04-08T15:00:00.000Z
+          duration: 300
+          cpu/utilization: 55.38958399228782
+          memory/utilization: 17.41807142893473
+          network/data-in: 6.783096142071654e-8
+          network/data-out: 1.2999254297803863e-7
+        - timestamp: 2024-04-08T15:05:00.000Z
+          duration: 300
+          cpu/utilization: 47.44628666015924
+          memory/utilization: 17.41804281870524
+          network/data-in: 6.597497609375237e-8
+          network/data-out: 1.1949254297803864e-7
+        - timestamp: 2024-04-08T15:10:00.000Z
+          duration: 300
+          cpu/utilization: 40.638127191711746
+          memory/utilization: 17.418053944905598
+          network/data-in: 6.737497609375237e-8
+          network/data-out: 1.3686144397506718e-7
+        - timestamp: 2024-04-08T15:15:00.000Z
+          duration: 300
+          cpu/utilization: 41.181991555474696
+          memory/utilization: 17.418020566304527
+          network/data-in: 6.398497609375237e-8
+          network/data-out: 1.5196144397506718e-7
+        - timestamp: 2024-04-08T15:20:00.000Z
+          duration: 300
+          cpu/utilization: 45.22827210858185
+          memory/utilization: 17.420136133829754
+          network/data-in: 6.872497609375237e-8
+          network/data-out: 1.489614439750672e-7
+      outputs:
+        - timestamp: 2024-04-08T14:00:00.000Z
+          duration: 300
+          cpu/utilization: 49.985708909613194
+          memory/utilization: 17.145002683003742
+          network/data-in: 2.7438050872688317e-7
+          network/data-out: 0.0000011386791112165653
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004114800643920898
+          network/energy: 2.8261192398868968e-9
+          cpu/energy: 0.01249847406184316
+          energy: 0.0166132775318833
+          carbon-embodied: 157.325
+          carbon-operational: 1.3551450482757208
+          carbon: 0.5289338168275857
+          sci: 158.6801450482757
+        - timestamp: 2024-04-08T14:05:00.000Z
+          duration: 300
+          cpu/utilization: 42.61520726729
+          memory/utilization: 17.356672286987305
+          network/data-in: 6.859674999009613e-8
+          network/data-out: 2.7426699996038454e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004165601348876953
+          network/energy: 6.857274999009614e-10
+          cpu/energy: 0.011670946109406473
+          energy: 0.015836548144010924
+          carbon-embodied: 157.325
+          carbon-operational: 1.291787232106971
+          carbon: 0.5287226241070232
+          sci: 158.61678723210696
+        - timestamp: 2024-04-08T14:10:00.000Z
+          duration: 300
+          cpu/utilization: 49.13741458705495
+          memory/utilization: 17.413272857666016
+          network/data-in: 6.856674999009613e-8
+          network/data-out: 2.7426692589603846e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179185485839843
+          network/energy: 6.856673517722692e-10
+          cpu/energy: 0.012407507963213738
+          energy: 0.016586694134720935
+          carbon-embodied: 157.325
+          carbon-operational: 1.3529766405691865
+          carbon: 0.5289265888018972
+          sci: 158.67797664056917
+        - timestamp: 2024-04-08T14:15:00.000Z
+          duration: 300
+          cpu/utilization: 43.60946824732535
+          memory/utilization: 17.413131395975753
+          network/data-in: 6.837904365752413e-8
+          network/data-out: 2.735161746300965e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179151535034181
+          network/energy: 6.837904365752412e-10
+          cpu/energy: 0.011788622866641393
+          energy: 0.01596777508546601
+          carbon-embodied: 157.325
+          carbon-operational: 1.3024914137214623
+          carbon: 0.5287583047124048
+          sci: 158.62749141372146
+        - timestamp: 2024-04-08T14:20:00.000Z
+          duration: 300
+          cpu/utilization: 47.94812670387665
+          memory/utilization: 17.413318951924637
+          network/data-in: 6.814904365752413e-8
+          network/data-out: 2.735167346300965e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179196548461913
+          network/energy: 6.833315565752413e-10
+          cpu/energy: 0.012278524811127726
+          energy: 0.016457722042921195
+          carbon-embodied: 157.325
+          carbon-operational: 1.3424563870410817
+          carbon: 0.5288915212901368
+          sci: 158.66745638704106
+        - timestamp: 2024-04-08T14:25:00.000Z
+          duration: 300
+          cpu/utilization: 44.62622445809058
+          memory/utilization: 17.41310914357503
+          network/data-in: 6.678904365752414e-8
+          network/data-out: 2.495167346300965e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179146194458008
+          network/energy: 6.326115565752413e-10
+          cpu/energy: 0.011906654194824463
+          energy: 0.01608580102189403
+          carbon-embodied: 157.325
+          carbon-operational: 1.3121187893558959
+          carbon: 0.5287903959645196
+          sci: 158.63711878935587
+        - timestamp: 2024-04-08T14:30:00.000Z
+          duration: 300
+          cpu/utilization: 48.464855654316295
+          memory/utilization: 17.41322199503581
+          network/data-in: 6.873809095451751e-8
+          network/data-out: 1.3747618190903502e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179173278808594
+          network/energy: 4.1242854572710507e-10
+          cpu/energy: 0.012334791535775052
+          energy: 0.016513965227012192
+          carbon-embodied: 157.325
+          carbon-operational: 1.3470441435673843
+          carbon: 0.5289068138118913
+          sci: 158.67204414356738
+        - timestamp: 2024-04-08T14:35:00.000Z
+          duration: 300
+          cpu/utilization: 36.85958561209994
+          memory/utilization: 17.413328488667805
+          network/data-in: 6.347380909545176e-8
+          network/data-out: 1.0999254297803864e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179198837280273
+          network/energy: 3.469327041469808e-10
+          cpu/energy: 0.010936025457326446
+          energy: 0.015115224641539424
+          carbon-embodied: 157.325
+          carbon-operational: 1.2329488740103707
+          carbon: 0.5285264962467011
+          sci: 158.55794887401035
+        - timestamp: 2024-04-08T14:40:00.000Z
+          duration: 300
+          cpu/utilization: 35.347429291505
+          memory/utilization: 17.41313934326172
+          network/data-in: 6.673096142071653e-8
+          network/data-out: 1.0999254297803864e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004179153442382812
+          network/energy: 3.5344700879751035e-10
+          cpu/energy: 0.010724782125509456
+          energy: 0.014903935921339278
+          carbon-embodied: 157.325
+          carbon-operational: 1.2157140531036448
+          carbon: 0.5284690468436788
+          sci: 158.54071405310364
+        - timestamp: 2024-04-08T14:45:00.000Z
+          duration: 300
+          cpu/utilization: 48.4187954052908
+          memory/utilization: 17.413196563720703
+          network/data-in: 6.783096142071654e-8
+          network/data-out: 1.2999254297803863e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.0041791671752929695
+          network/energy: 3.9564700879751037e-10
+          cpu/energy: 0.012329790591913534
+          energy: 0.016508958162853513
+          carbon-embodied: 157.325
+          carbon-operational: 1.346635717343961
+          carbon: 0.5289054523911465
+          sci: 158.67163571734395
+        - timestamp: 2024-04-08T14:50:00.000Z
+          duration: 300
+          cpu/utilization: 46.6151915944258
+          memory/utilization: 17.413231531778973
+          network/data-in: 6.813096142071653e-8
+          network/data-out: 1.1479254297803864e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.0041791755676269535
+          network/energy: 3.6584700879751033e-10
+          cpu/energy: 0.012131579358191983
+          energy: 0.016310755291665945
+          carbon-embodied: 157.325
+          carbon-operational: 1.330468309141191
+          carbon: 0.5288515610304706
+          sci: 158.65546830914118
+        - timestamp: 2024-04-08T14:55:00.000Z
+          duration: 300
+          cpu/utilization: 51.49152278813774
+          memory/utilization: 17.414560317993164
+          network/data-in: 6.523096142071654e-8
+          network/data-out: 1.0939254297803863e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.0041794944763183595
+          network/energy: 3.4924700879751036e-10
+          cpu/energy: 0.0126581393668134
+          energy: 0.01683763419237877
+          carbon-embodied: 157.325
+          carbon-operational: 1.3734458210723361
+          carbon: 0.5289948194035744
+          sci: 158.6984458210723
+        - timestamp: 2024-04-08T15:00:00.000Z
+          duration: 300
+          cpu/utilization: 55.38958399228782
+          memory/utilization: 17.41807142893473
+          network/data-in: 6.783096142071654e-8
+          network/data-out: 1.2999254297803863e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004180337142944335
+          network/energy: 3.9564700879751037e-10
+          cpu/energy: 0.013061349344069505
+          energy: 0.01724168688266085
+          carbon-embodied: 157.325
+          carbon-operational: 1.4064043990186454
+          carbon: 0.529104681330062
+          sci: 158.73140439901863
+        - timestamp: 2024-04-08T15:05:00.000Z
+          duration: 300
+          cpu/utilization: 47.44628666015924
+          memory/utilization: 17.41804281870524
+          network/data-in: 6.597497609375237e-8
+          network/data-out: 1.1949254297803864e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004180330276489257
+          network/energy: 3.70935038143582e-10
+          cpu/energy: 0.012223519648764431
+          energy: 0.016403850296188727
+          carbon-embodied: 157.325
+          carbon-operational: 1.3380620686601143
+          carbon: 0.5288768735622004
+          sci: 158.6630620686601
+        - timestamp: 2024-04-08T15:10:00.000Z
+          duration: 300
+          cpu/utilization: 40.638127191711746
+          memory/utilization: 17.418053944905598
+          network/data-in: 6.737497609375237e-8
+          network/data-out: 1.3686144397506718e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004180332946777343
+          network/energy: 4.084728401376391e-10
+          cpu/energy: 0.011429550686248563
+          energy: 0.015609884041498748
+          carbon-embodied: 157.325
+          carbon-operational: 1.2732982412650529
+          carbon: 0.5286609941375502
+          sci: 158.59829824126504
+        - timestamp: 2024-04-08T15:15:00.000Z
+          duration: 300
+          cpu/utilization: 41.181991555474696
+          memory/utilization: 17.418020566304527
+          network/data-in: 6.398497609375237e-8
+          network/data-out: 1.5196144397506718e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.004180324935913087
+          network/energy: 4.3189284013763906e-10
+          cpu/energy: 0.011496998044530448
+          energy: 0.015677323412336377
+          carbon-embodied: 157.325
+          carbon-operational: 1.2787992707442781
+          carbon: 0.5286793309024809
+          sci: 158.60379927074428
+        - timestamp: 2024-04-08T15:20:00.000Z
+          duration: 300
+          cpu/utilization: 45.22827210858185
+          memory/utilization: 17.420136133829754
+          network/data-in: 6.872497609375237e-8
+          network/data-out: 1.489614439750672e-7
+          memory/capacity: 12
+          cpu/thermal-design-power: 200
+          grid/carbon-intensity: 81.57
+          device/emissions-embodied: 1887.9
+          time-reserved: 3600
+          device/expected-lifespan: 3600
+          resources-reserved: 1
+          resources-total: 1
+          functional-unit-time: 5mins
+          memory/energy: 0.0041808326721191405
+          network/energy: 4.353728401376391e-10
+          cpu/energy: 0.011975526773893238
+          energy: 0.016156359881385217
+          carbon-embodied: 157.325
+          carbon-operational: 1.317874275524592
+          carbon: 0.5288095809184152
+          sci: 158.64287427552458

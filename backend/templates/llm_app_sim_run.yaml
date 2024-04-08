@@ -1,0 +1,8 @@
+---
+app_name: llm_app
+agg_step: 300
+promql_queries:
+  pct_cpu_util: 'increase(container_cpu_usage_seconds_total{name="llm_app"}[5m]) / 300 * 100'
+  pct_mem_util: 'avg_over_time(container_memory_usage_bytes{name="llm_app"}[5m]) / (container_spec_memory_limit_bytes{name="llm_app"}) * 100'
+  net_out: 'increase(container_network_transmit_bytes_total{name="llm_app"}[5m]) / 1073741824'   # (1024 **4)
+  net_in: 'increase(container_network_receive_bytes_total{name="llm_app"}[5m]) / 1073741824'   # (1024 **4)

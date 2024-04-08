@@ -1,0 +1,91 @@
+services:
+  if_plugin:
+    image: europe-west2-docker.pkg.dev/premi0074164-gcpguild/michele-ch24/if_plugin:1.0
+    container_name: if_plugin
+    tty: true
+    stdin_open: true
+    environment:
+      - APP_NAME
+    volumes:
+      - ../if_plugin:/if_plugin
+      - ../runs:/runs
+      - ../outputs:/outputs
+    networks:
+      stack_net:
+        ipv4_address: 172.20.0.5
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+        limits:
+          memory: 256M
+    depends_on:
+      - prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    command:
+      - --config.file=/admin/prometheus.yml
+    volumes:
+      - ./prometheus.yml:/admin/prometheus.yml:ro
+      - /prometheus_data:/prometheus
+    networks:
+      stack_net:
+        ipv4_address: 172.20.0.4
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+        limits:
+          memory: 256M
+    depends_on:
+      - cadvisor
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - 8080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    networks:
+      stack_net:
+        ipv4_address: 172.20.0.3
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+        limits:
+          memory: 256M
+    depends_on:
+      - llm_app
+  llm_app:
+    image: europe-west2-docker.pkg.dev/premi0074164-gcpguild/michele-ch24/llm_app:1.0
+    container_name: llm_app
+    tty: true
+    stdin_open: true
+    command: python main.py
+    environment:
+      - APP_NAME=llm_app
+    volumes:
+      - ../templates:/templates
+      - ../runs/llm_app:/runs
+      - ../workloads:/workloads
+    working_dir: /root/llm_app
+    networks:
+      stack_net:
+        ipv4_address: 172.20.0.2
+    deploy:
+      resources:
+        reservations:
+          memory: 12G
+        limits:
+          memory: 12G
+networks:
+  stack_net:
+    name: if_plugin_net
+    external: true
